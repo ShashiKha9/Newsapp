@@ -40,7 +40,7 @@ class NewsPageScreenState extends State<NewsPageScreen>{
             child: StreamBuilder<News>(
                 stream: bloc.newsList.stream,
                 builder: (context, AsyncSnapshot<News>  snap) {
-                  return FutureBuilder<bool>(
+                  return  FutureBuilder<bool>(
                       future: postData(),
                       builder: (BuildContext context, AsyncSnapshot<bool>   snapshot) {
                         if (!snapshot.hasData) {
