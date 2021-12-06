@@ -83,8 +83,14 @@ class NewsPageScreenState extends State<NewsPageScreen>{
                                             }
                                             else {
                                               saveddata.add(saved[index]);
+                                              saveddata.add(snap.data!.data[index].title +
+                                                  snap.data!.data[index].summary,
+                                              );
                                               Navigator.push(context, MaterialPageRoute(builder: (context)=>FavScreen(
-                                                  favouriteitems: saveddata,
+                                                favouriteitems: saveddata,
+
+
+
                                               )));
                                               // pushToFavouriteList(context);
 
